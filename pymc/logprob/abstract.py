@@ -38,7 +38,6 @@ import abc
 
 from collections.abc import Sequence
 from functools import singledispatch
-from typing import List, Sequence
 
 from multipledispatch import dispatch as multipledispatch
 from pytensor.graph.op import Op
@@ -161,12 +160,10 @@ MeasurableVariable.register(MeasurableElemwise)
 def _kl_div(
     q_dist: Op,
     p_dist: Op,
-    q_inputs: List[TensorVariable],
-    p_inputs: List[TensorVariable],
+    q_inputs: list[TensorVariable],
+    p_inputs: list[TensorVariable],
 ) -> TensorVariable:
-    raise NotImplementedError(
-        f"KL Divergence is not implemented for {q_dist}, {p_dist}"
-    )
+    raise NotImplementedError(f"KL Divergence is not implemented for {q_dist}, {p_dist}")
 
 
 def _kl_div_helper(

@@ -11,7 +11,6 @@
 #   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 #   See the License for the specific language governing permissions and
 #   limitations under the License.
-from typing import List
 
 import pytensor.tensor as pt
 
@@ -23,8 +22,8 @@ from pymc.logprob.abstract import _kl_div
 def _normal_normal_kl(
     q_dist: Normal,
     p_dist: Normal,
-    q_inputs: List[pt.TensorVariable],
-    p_inputs: List[pt.TensorVariable],
+    q_inputs: list[pt.TensorVariable],
+    p_inputs: list[pt.TensorVariable],
 ):
     _, _, _, q_mu, q_sigma = q_inputs
     _, _, _, p_mu, p_sigma = p_inputs
