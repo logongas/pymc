@@ -114,7 +114,7 @@ from pymc.distributions.timeseries import (
 )
 from pymc.distributions.truncated import Truncated
 
-# no dispatched stats are being initialized
+# now dispatched stats are being initialized
 # isort: off
 import pymc.distributions.stats
 
